@@ -1,81 +1,129 @@
-URL Shorty - A MERN Stack URL Shortener
-!https://www.google.com/search?q=https://www.bnbmag.com/%25EB%25B0%2594%25EC%2581%259C-%25EC%2595%2584%25EC%25B9%25A8-%25EC%258A%25A4%25ED%2583%2580%25EC%259D%25BC-%25EB%2582%25B4%25EA%25B8%25B0-5%25EB%25B6%2584-%25EC%25BB%25B7/(https://placehold.co/800x400/111827/7dd3fc%3Ftext%3DURL%2BShorty%2BApp)
-A full-stack URL shortening web application built with the MERN (MongoDB, Express.js, React, Node.js) stack. This application allows users to convert long URLs into short, easy-to-share links and tracks the number of times each link is visited.
-Features
-Shorten URLs: Enter a long URL and receive a unique, short link.
-Seamless Redirection: Visiting a short link automatically redirects to the original long URL.
-Click Tracking: An admin dashboard displays a list of all shortened links and their corresponding click counts.
-RESTful API: A clean backend API to handle link creation and redirection.
-Modern Frontend: A responsive and user-friendly interface built with React and styled with Tailwind CSS.
-Copy to Clipboard: Easily copy the generated short URL with a single click.
-Tech Stack
-Backend
-Node.js: JavaScript runtime environment.
-Express.js: Web framework for Node.js.
-MongoDB: NoSQL database for storing URL data.
-Mongoose: Object Data Modeling (ODM) library for MongoDB.
-shortid: Library to generate unique short codes.
-cors: Middleware for enabling Cross-Origin Resource Sharing.
-dotenv: For managing environment variables.
-Frontend
-React: JavaScript library for building user interfaces.
-React Router: For client-side routing and navigation.
-Axios: For making HTTP requests to the backend API.
-Tailwind CSS: A utility-first CSS framework for styling.
-Prerequisites
-Before you begin, ensure you have the following installed on your local machine:
-Node.js (which includes npm)
-MongoDB (running locally or a cloud instance)
-Installation & Setup
-Follow these steps to get the application running locally.
-1. Clone the Repository
-git clone [https://github.com/your-username/url-shorty.git](https://github.com/your-username/url-shorty.git)
+
+---
+
+# 🌐 URL Shorty - A MERN Stack URL Shortener
+
+![URL Shorty App](https://placehold.co/800x400/111827/7dd3fc?text=URL+Shorty+App)
+
+**URL Shorty** is a full-stack URL shortening web application built with the **MERN (MongoDB, Express.js, React, Node.js)** stack. This app allows users to convert long URLs into short, easy-to-share links and tracks the number of times each link is visited.
+
+---
+
+## 🚀 Features
+
+* 🔗 **Shorten URLs** — Enter a long URL and receive a unique, short link.
+* 🔁 **Seamless Redirection** — Visiting a short link automatically redirects to the original URL.
+* 📈 **Click Tracking** — Admin dashboard shows all shortened links with click counts.
+* 🧠 **RESTful API** — Clean backend API for creating and redirecting links.
+* 💻 **Modern Frontend** — Responsive UI built with **React** and styled using **Tailwind CSS**.
+* 📋 **Copy to Clipboard** — Easily copy generated short URLs in one click.
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔧 Backend
+
+* **Node.js** – JavaScript runtime
+* **Express.js** – Server framework
+* **MongoDB** – NoSQL database
+* **Mongoose** – ODM for MongoDB
+* **shortid** – Unique short code generator
+* **cors** – Cross-Origin Resource Sharing
+* **dotenv** – Environment variable management
+
+### 🎨 Frontend
+
+* **React** – UI library
+* **React Router** – Frontend routing
+* **Axios** – API requests
+* **Tailwind CSS** – Utility-first CSS
+
+---
+
+## 📋 Prerequisites
+
+Ensure the following are installed:
+
+* [Node.js](https://nodejs.org/en/)
+* [MongoDB](https://www.mongodb.com/try/download/community) (local or cloud instance)
+
+---
+
+## 🧪 Installation & Setup
+
+Follow the steps below to run the application locally.
+
+### 🔹 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/url-shorty.git
 cd url-shorty
+```
 
+---
 
-2. Backend Setup
-Navigate to the backend directory and install the required dependencies.
+### 🔹 2. Backend Setup
+
+Navigate to the backend directory and install dependencies:
+
+```bash
 cd backend
 npm install
+```
 
+Create a `.env` file in the `backend/` directory:
 
-Create a .env file in the backend directory and add your MongoDB connection string and base URL.
+```env
 # .env
 MONGO_URI=mongodb://localhost:27017/url-shortener
 BASE_URL=http://localhost:5000
+```
 
+Start the backend server:
 
-Start the backend server. It will run on http://localhost:5000.
+```bash
 node server.js
+```
 
+> 🟢 Backend is now running on: `http://localhost:5000`
 
-3. Frontend Setup
-Open a new terminal, navigate to the frontend directory, and install its dependencies.
+---
+
+### 🔹 3. Frontend Setup
+
+Open a new terminal, then:
+
+```bash
 cd frontend
 npm install
-
-
-Start the React development server. It will open the application in your browser at http://localhost:3000.
 npm start
+```
+
+> 🟢 Frontend will launch at: `http://localhost:3000`
+
+---
+
+## 🌍 App URLs
+
+* **Main App:** `http://localhost:3000`
+* **Admin Page:** `http://localhost:3000/admin`
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint       | Description                                     |
+| ------ | -------------- | ----------------------------------------------- |
+| POST   | `/api/shorten` | Create a new short URL from a long URL.         |
+| GET    | `/:shortcode`  | Redirect to the original URL and track the hit. |
+| GET    | `/api/urls`    | Retrieve all shortened URLs (admin only).       |
+
+---
+
+## 📄 License
+
+This project is **open-source**. Feel free to fork, modify, and use it as you see fit.
 
 
-You should now have the application running!
-Main App: http://localhost:3000
-Admin Page: http://localhost:3000/admin
-API Endpoints
-The backend server exposes the following REST API endpoints:
-Method
-Endpoint
-Description
-POST
-/api/shorten
-Creates a new short URL from a long URL.
-GET
-/:shortcode
-Redirects to the original URL and tracks the click.
-GET
-/api/urls
-Retrieves a list of all URLs for the admin page.
-
-License
-This project is open source. Feel free to fork, modify, and use it as you see fit. Consider adding a license like MIT if you intend to share it widely.
+---
